@@ -109,13 +109,15 @@ for (let i = 0; i < n; i++) {
 //   .attr("mask", (d) => d.mask)
 
 svg
-  .selectAll("rect.horizontal")
+  // .selectAll("rect.horizontal") corresps to add class below
+  .append("g")
+  .selectAll("rect")
   .data(range(n)) //var rectangles
   .join("rect")
   .attr("y", (d) => d * 20)
   .attr("width", width)
   .attr("height", 10)
-  .attr("class", "horizontal")
+  // .attr("class", "horizontal")
   .attr("mask", "url(#circle-mask)")
 
 // const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
@@ -127,13 +129,15 @@ svg
 // svg.appendChild(rect);
 
 svg
-  .selectAll("rect.vertical")
+  // .selectAll("rect.vertical") corresps to add class below
+  .append("g")
+  .selectAll("rect")
   .data(range(n)) //var rectangles
   .join("rect")
   .attr("x", (d) => d * 20)
   .attr("width", 10)
   .attr("height", height)
-  .attr("class", "vertical")
+  // .attr("class", "vertical")
   .attr("mask", "url(#circle-mask-2)")
 
 // for (let i = 0; i < n; i++) {
