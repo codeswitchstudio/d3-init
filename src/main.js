@@ -1,5 +1,7 @@
 import "./style.css"
-import { select, range, symbolsFill, symbol } from "d3"
+import { select, range } from "d3"
+
+// console.log(select);
 
 const width = window.innerWidth
 const height = window.innerHeight
@@ -18,9 +20,11 @@ mask
   .attr("fill", "black")
 
 mask
-  .append("path")
-
-  .attr("d", "symbol"(symbolsFill[(0, 300)]))
+  .append("circle")
+  .attr("cx", width / 2)
+  .attr("cy", height / 2)
+  .attr("r", 200)
+  .attr("fill", "white")
 
 const mask2 = svg.append("mask").attr("id", "circle-mask-2")
 
