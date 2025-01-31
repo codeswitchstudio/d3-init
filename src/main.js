@@ -1,7 +1,7 @@
 import "./style.css"
 import { select, range } from "d3"
 
-// console.log(select);
+console.log(select)
 
 const width = window.innerWidth
 const height = window.innerHeight
